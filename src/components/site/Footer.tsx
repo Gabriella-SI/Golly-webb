@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
-import { EMAIL, INSTAGRAM_URL, WHATSAPP_URL } from "@/lib/models";
+import { EMAIL, WHATSAPP_URL } from "@/lib/models";
 
 const links = [
   { label: "Início", hash: "inicio" },
@@ -37,7 +37,7 @@ export function Footer() {
         </nav>
 
         <div className="space-y-3 text-sm">
-          <a
+          
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -45,23 +45,12 @@ export function Footer() {
           >
             <MessageCircle className="h-4 w-4" /> WhatsApp
           </a>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
-          >
-            <Instagram className="h-4 w-4" /> Instagram
-          </a>
-          <a
+          
             href={`mailto:${EMAIL}`}
             className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
           >
             <Mail className="h-4 w-4" /> {EMAIL}
           </a>
-          <p className="pt-1 text-xs text-muted-foreground/70">
-            Contatos em placeholder — atualize com os canais oficiais.
-          </p>
         </div>
       </div>
 
