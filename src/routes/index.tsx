@@ -9,12 +9,15 @@ import {
   LifeBuoy,
   MonitorSmartphone,
   Palette,
-  Quote,
   RefreshCw,
+  Rocket,
   Server,
+  ShieldCheck,
   Sparkles,
   Target,
+  Wand2,
   Wrench,
+  Zap,
 } from "lucide-react";
 import {
   Accordion,
@@ -106,7 +109,8 @@ const steps = [
 const plans = [
   {
     name: "START",
-    price: "A partir de R$ XXX",
+    icon: Zap,
+    price: "A partir de R$ 250",
     tagline: "Para quem precisa começar sua presença digital.",
     features: [
       "Modelo pronto personalizado",
@@ -120,7 +124,8 @@ const plans = [
   },
   {
     name: "PRO",
-    price: "A partir de R$ XXX",
+    icon: Sparkles,
+    price: "A partir de R$ 350",
     tagline: "Para negócios que querem uma apresentação mais completa.",
     features: [
       "Estrutura ampliada por seções",
@@ -135,6 +140,7 @@ const plans = [
   },
   {
     name: "CUSTOM",
+    icon: Wand2,
     price: "Valor sob consulta",
     tagline: "Para projetos personalizados e necessidades específicas.",
     features: [
@@ -377,10 +383,32 @@ function Home() {
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {visible.map((m, i) => (
                 <Reveal key={m.slug} delay={i * 60}>
-                  <article className="card-elevated group h-full overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40">
-                    <div className="overflow-hidden border-b border-border">
+                  <article className="card-elevated group relative h-full overflow-visible rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:rotate-[-0.6deg] hover:border-primary/40">
+                    <div className="overflow-hidden rounded-t-2xl border-b border-border">
                       <div className="transition-transform duration-500 group-hover:scale-[1.04]">
                         <ModelPreview model={m} />
+                      </div>
+                    </div>
+
+                    {/* mini mockup mobile flutuando, sobreposto ao canto do card */}
+                    <div
+                      className="animate-float-medium pointer-events-none absolute -right-4 -top-5 z-20 hidden w-16 opacity-90 transition-opacity duration-300 group-hover:opacity-100 sm:block"
+                      style={{
+                        ["--float-rotate" as string]: "6deg",
+                        animationDelay: `${(i % 3) * 0.4}s`,
+                      }}
+                      aria-hidden="true"
+                    >
+                      <div className="card-elevated glow-brand overflow-hidden rounded-lg shadow-2xl">
+                        <div
+                          className="h-2 w-full"
+                          style={{ background: `oklch(0.55 0.18 ${m.hue})` }}
+                        />
+                        <div className="space-y-1 bg-background p-1.5">
+                          <span className="block h-1 w-3/4 rounded-full bg-foreground/40" />
+                          <span className="block h-1 w-full rounded-full bg-foreground/15" />
+                          <span className="block h-1 w-2/3 rounded-full bg-foreground/15" />
+                        </div>
                       </div>
                     </div>
                     <div className="p-5">
@@ -470,7 +498,19 @@ function Home() {
                         Mais escolhido
                       </span>
                     )}
-                    <h3 className="font-display text-xl font-bold tracking-tight">{p.name}</h3>
+                    <span
+                      className={
+                        p.highlight
+                          ? "animate-float-medium inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-gradient text-primary-foreground"
+                          : "inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-surface/60 text-primary"
+                      }
+                      style={p.highlight ? { ["--float-rotate" as string]: "-3deg" } : undefined}
+                    >
+                      <p.icon className="h-5 w-5" />
+                    </span>
+                    <h3 className="mt-5 font-display text-xl font-bold tracking-tight">
+                      {p.name}
+                    </h3>
                     <p className="mt-2 text-sm text-muted-foreground">{p.tagline}</p>
                     <p className="mt-6 font-display text-2xl font-bold">{p.price}</p>
                     <ul className="mt-6 space-y-3">
@@ -540,42 +580,78 @@ function Home() {
         </section>
 
         {/* DEPOIMENTOS */}
-        <section className="border-y border-border bg-surface/25 py-20 lg:py-28">
-          <div className="mx-auto max-w-6xl px-5 lg:px-8">
+        <section className="relative overflow-hidden border-y border-border bg-surface/25 py-20 lg:py-28">
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(40% 50% at 50% 0%, oklch(0.4 0.16 265 / 0.18), transparent 70%)",
+            }}
+          />
+          <div className="relative mx-auto max-w-3xl px-5 text-center lg:px-8">
             <Reveal>
-              <SectionTitle
-                eyebrow="Depoimentos"
-                title={
-                  <>
-                    Este espaço é do <span className="text-gradient">próximo cliente</span>.
-                  </>
-                }
-                text="A Golly Web está começando. Em vez de inventar depoimentos, deixamos a estrutura pronta para os seus resultados reais."
-                center
-              />
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
+                <Rocket className="h-3.5 w-3.5 text-primary" />
+                Golly Web está começando
+              </span>
             </Reveal>
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
-              {[
-                "Seu próximo cliente pode estar a uma boa landing page de distância.",
-                "Espaço reservado para o depoimento do seu projeto.",
-                "Aqui entra o resultado real de quem confiou na Golly Web.",
-              ].map((t, i) => (
-                <Reveal key={t} delay={i * 80}>
-                  <figure className="card-elevated h-full rounded-2xl p-6">
-                    <Quote className="h-6 w-6 text-primary" />
-                    <blockquote className="mt-4 font-display text-lg leading-snug">{t}</blockquote>
-                    <figcaption className="mt-6 flex items-center gap-3">
-                      <span className="h-9 w-9 rounded-full border border-dashed border-border" />
-                      <span className="text-xs text-muted-foreground">
-                        Nome do cliente
-                        <br />
-                        <span className="text-muted-foreground/70">Empresa · placeholder</span>
-                      </span>
-                    </figcaption>
-                  </figure>
-                </Reveal>
-              ))}
-            </div>
+            <Reveal delay={80}>
+              <h2 className="mt-5 font-display text-3xl font-bold leading-tight sm:text-4xl">
+                Seu projeto pode ser o{" "}
+                <span className="text-gradient">primeiro case de sucesso</span>.
+              </h2>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Em vez de inventar depoimentos, preferimos entregar resultado de verdade. Todo
+                projeto novo recebe atenção total — do jeito que só quem está começando consegue
+                dar.
+              </p>
+            </Reveal>
+
+            <Reveal delay={200}>
+              <div className="relative mx-auto mt-10 max-w-xl">
+                {/* elementos flutuantes soltos, decorativos */}
+                <span
+                  className="animate-float-medium animate-delay-1 pointer-events-none absolute -left-6 -top-4 hidden h-2.5 w-2.5 rounded-full bg-brand-gradient opacity-70 sm:block"
+                  aria-hidden="true"
+                />
+                <span
+                  className="animate-drift pointer-events-none absolute -right-4 bottom-0 hidden h-2 w-2 rounded-full bg-violet opacity-60 sm:block"
+                  aria-hidden="true"
+                />
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {[
+                    { icon: ShieldCheck, title: "Contrato claro", text: "Escopo e prazo combinados antes de começar." },
+                    { icon: Gauge, title: "Resposta rápida", text: "Retorno em até 24h úteis pelo WhatsApp." },
+                    { icon: RefreshCw, title: "Ajustes inclusos", text: "Rodadas de revisão previstas no projeto." },
+                  ].map((f, i) => (
+                    <div
+                      key={f.title}
+                      className="animate-float-reverse card-elevated rounded-2xl p-5 text-left"
+                      style={{ animationDelay: `${i * 0.5}s` }}
+                    >
+                      <f.icon className="h-5 w-5 text-primary" />
+                      <p className="mt-3 text-sm font-semibold">{f.title}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                        {f.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={260}>
+              <Link
+                to="/"
+                hash="orcamento"
+                className="group mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-brand-gradient px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-transform duration-200 hover:scale-[1.03]"
+              >
+                Quero ser o primeiro
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Reveal>
           </div>
         </section>
 
@@ -642,7 +718,7 @@ function Home() {
                   Solicitar orçamento
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-                <a
+                
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
