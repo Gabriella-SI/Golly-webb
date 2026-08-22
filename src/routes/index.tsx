@@ -762,7 +762,6 @@ function Home() {
             </Reveal>
         </section>
       </main>
-
       <Footer />
     </>
   );
