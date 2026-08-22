@@ -1,605 +1,301 @@
-# Golly Pages Studio
-
-Crie um site institucional e comercial completo para uma empresa chamada Golly Web, especializada na criação de landing pages profissionais.
-
-OBJETIVO DO SITE
-
-O objetivo principal é apresentar a Golly Web, mostrar a qualidade dos trabalhos e converter visitantes em potenciais clientes.
-
-A Golly Web oferece:
-
-Landing pages prontas e personalizáveis
-
-Landing pages desenvolvidas sob medida para cada cliente
-
-Hospedagem gratuita
-
-Domínio gratuito ou pago dependendo do projeto
-
-Manutenção
-
-Alterações e atualizações mediante taxa
-
-Diferentes planos e níveis de serviço
-
-O cliente não compra diretamente pelo site. O objetivo é fazer com que ele solicite um orçamento ou entre em contato pelo WhatsApp.
-
-A empresa atende:
-
-Pequenos negócios
-
-Empresas
-
-Profissionais autônomos
-
-Criadores de conteúdo
-
-Infoprodutores
-
-Prestadores de serviço
-
-Marcas e projetos digitais em geral
-
-POSICIONAMENTO DA MARCA
-
-A Golly Web deve transmitir imediatamente:
-
-“CARACA, EU QUERO UM SITE DESSE.”
-
-A experiência precisa parecer premium, profissional, moderna, jovem, criativa e tecnológica.
-
-Mesmo oferecendo preços acessíveis inicialmente, a aparência NÃO deve parecer barata ou amadora.
-
-A percepção deve ser de uma empresa pequena, moderna e extremamente competente, com potencial para se tornar uma grande marca.
-
-Não utilizar “IA” como principal argumento comercial. A tecnologia pode fazer parte do processo interno, mas o foco da comunicação deve ser o resultado entregue ao cliente.
-
-IDENTIDADE VISUAL
-
-Criar uma identidade visual própria para a Golly Web.
-
-Paleta principal:
-
-Preto
-
-Azul escuro
-
-Roxo escuro
-
-Branco para contraste e textos
-
-Não utilizar:
-
-Vermelho
-
-Amarelo
-
-Laranja
-
-Cores neon excessivamente fortes
-
-O site deve ter predominantemente fundo escuro.
-
-Utilizar gradientes sutis entre azul e roxo escuro quando fizer sentido.
-
-A estética deve ser:
-
-Futurista
-
-Tecnológica
-
-Criativa
-
-Premium
-
-Minimalista
-
-Jovem
-
-Elegante
-
-Moderna
-
-Evitar aparência de template genérico de agência digital.
-
-Evitar excesso de elementos, excesso de gradientes, excesso de glow ou aparência infantil.
-
-LOGO
-
-Criar uma proposta visual para o logo da Golly Web.
-
-O logo deve ser simples, moderno e memorável.
-
-Criar preferência por um símbolo que possa funcionar sozinho como ícone/favicon, além da versão com o nome “Golly Web”.
-
-O símbolo não precisa representar literalmente um site, computador ou página. Priorizar uma identidade abstrata e tecnológica.
-
-TIPOGRAFIA
-
-Utilizar uma fonte moderna e sofisticada.
-
-Os títulos devem ser grandes, fortes e impactantes.
-
-Criar contraste claro entre:
-
-títulos
-
-subtítulos
-
-textos
-
-botões
-
-informações secundárias
-
-A tipografia deve contribuir para a sensação premium.
-
-ESTRUTURA DO SITE
-
-1. HEADER
-
-Criar um header moderno e minimalista.
-
-Logo:
 Golly Web
 
-Menu:
+Landing pages que transformam ideias em presença digital.
 
-Início
+A Golly Web é uma empresa especializada na criação de landing pages profissionais, modernas e estratégicas para negócios que querem construir uma presença digital forte.
 
-Soluções
+Criamos páginas pensadas não apenas para serem bonitas, mas para apresentar marcas, gerar confiança e incentivar visitantes a entrarem em contato.
 
-Modelos
+Seu negócio merece mais do que uma página.
 
-Como funciona
+⸻
 
-Planos
+Sobre a Golly Web
 
-FAQ
+A Golly Web nasceu com a proposta de tornar a criação de uma presença digital profissional mais acessível, sem abrir mão de qualidade, design e estratégia.
 
-Botão de destaque:
-Solicitar orçamento
+Atendemos diferentes tipos de projetos, desde negócios que precisam de uma landing page para começar sua presença online até empresas que precisam de uma solução totalmente personalizada.
 
-Header fixo/sticky ao rolar.
+Para quem criamos
 
-No celular, utilizar menu hamburger elegante.
+* Pequenos negócios
+* Empresas
+* Profissionais autônomos
+* Prestadores de serviços
+* Criadores de conteúdo
+* Infoprodutores
+* Marcas
+* Projetos digitais
+* Profissionais liberais
 
+⸻
 
+Nossos serviços
 
-2. HERO
+Landing Pages
 
-Criar uma primeira seção extremamente impactante.
+Criamos landing pages modernas e responsivas para apresentar produtos, serviços, marcas e projetos.
 
-O visitante deve entender imediatamente o que a Golly Web faz.
+Projetos personalizados
 
-Sugestão de conceito de headline:
-
-“Seu negócio merece mais do que uma página.”
-
-Subheadline:
-
-“Criamos landing pages modernas, estratégicas e feitas para transformar visitantes em clientes.”
-
-Criar dois CTAs:
-
-Solicitar orçamento
-
-Ver modelos
-
-Adicionar uma demonstração visual grande de uma landing page criada pela Golly Web.
-
-Essa demonstração deve parecer um produto real, não apenas uma imagem estática genérica.
-
-Criar efeitos sutis de profundidade, movimento e iluminação em azul/roxo.
-
-Não exagerar nas animações.
-
-
-
-3. PROVA VISUAL / PORTFÓLIO
-
-Criar uma seção mostrando exemplos de landing pages.
-
-Título:
-
-“Veja o que podemos criar.”
-
-Mostrar diferentes modelos em cards ou mockups de dispositivos.
-
-Categorias:
-
-Negócios
-
-Serviços
-
-Profissionais
-
-Produtos
-
-Criadores
-
-Infoprodutos
-
-Cada projeto deve possuir botão:
-
-Ver demonstração
-
-Ao clicar, abrir a demonstração da landing page em uma nova visualização/página.
-
-O visitante deve conseguir experimentar os modelos.
-
-Criar aparência de portfólio premium.
-
-
-
-4. DIFERENCIAL
-
-Criar uma seção explicando por que escolher a Golly Web.
-
-Título:
-
-“Não criamos apenas páginas. Criamos experiências.”
-
-Criar cards para:
-
-Design que chama atenção
-Visual moderno e profissional.
-
-Estrutura pensada para conversão
-A página é organizada para levar o visitante à ação.
-
-Responsivo
-Experiência adaptada para celular, tablet e computador.
-
-Performance
-Páginas rápidas e eficientes.
-
-Personalização
-O projeto pode ser adaptado à identidade e aos objetivos de cada negócio.
-
-Suporte
-Possibilidade de manutenção e alterações após a entrega.
-
-Não transformar essa seção em uma lista técnica. O foco deve estar nos benefícios para o cliente.
-
-
-
-5. COMO FUNCIONA
-
-Criar uma seção simples em 4 etapas:
-
-01 — Você conta sua ideia
-
-O cliente explica seu negócio, objetivo e o que precisa.
-
-02 — Definimos a melhor solução
-
-A Golly Web apresenta a estrutura e a proposta ideal.
-
-03 — Criamos sua landing page
-
-O design e a estrutura são desenvolvidos de acordo com o projeto.
-
-04 — Sua página vai para o ar
-
-Publicação, configuração e entrega.
-
-Criar uma linha visual conectando as etapas.
-
-
-
-6. PLANOS
-
-Criar uma seção de planos, mas NÃO inventar preços definitivos.
-
-Utilizar placeholders editáveis para valores.
-
-Criar inicialmente três opções:
-
-START
-Para quem precisa começar sua presença digital.
-
-PRO
-Para negócios que querem uma apresentação mais completa.
-
-CUSTOM
-Para projetos personalizados.
-
-Cada plano deve possuir:
-
-descrição
-
-recursos
-
-CTA
-
-No plano CUSTOM, usar:
-
-Solicitar orçamento
-
-Não inventar preços reais. Utilizar algo como “A partir de R$ XXX” ou campos claramente editáveis.
-
-
-
-7. SERVIÇOS ADICIONAIS
-
-Criar uma seção para:
+Desenvolvemos páginas sob medida de acordo com a identidade visual, objetivos e necessidades de cada cliente.
 
 Hospedagem
 
+Possibilidade de hospedagem para colocar o projeto no ar e mantê-lo acessível.
+
 Domínio
+
+Orientação e configuração de domínio de acordo com cada projeto.
 
 Manutenção
 
-Alterações
+Após a entrega, o cliente pode contratar manutenção para manter sua página atualizada.
 
-Atualizações
+Alterações e atualizações
 
-Explicar que alguns serviços podem ser gratuitos dependendo do projeto e outros possuem custo adicional.
+Modificações de conteúdo, informações, imagens e outros elementos podem ser realizadas mediante contratação do serviço.
 
-Não prometer domínio gratuito para todos os clientes.
+⸻
 
+Nosso objetivo
 
+A Golly Web não quer simplesmente entregar um site.
 
-8. DEPOIMENTOS
+Queremos criar uma experiência que faça o potencial cliente pensar:
 
-Criar uma seção de depoimentos.
+“Caraca, eu quero um site desse.”
 
-Como a Golly Web está começando, NÃO inventar clientes ou depoimentos reais.
+Por isso, cada projeto busca equilibrar:
 
-Utilizar conteúdo claramente identificável como placeholder para ser substituído posteriormente.
+Design + Estratégia + Performance + Experiência
 
-Exemplo:
+O resultado deve representar profissionalmente o negócio do cliente e ajudá-lo a transformar sua presença digital em uma oportunidade comercial.
 
-“Seu próximo cliente pode estar a uma boa landing page de distância.”
+⸻
 
-Criar a estrutura visual para depoimentos futuros.
+Nosso posicionamento
 
+A Golly Web busca construir uma marca:
 
+* Moderna
+* Jovem
+* Criativa
+* Tecnológica
+* Profissional
+* Acessível
+* Estratégica
+* Ousada
 
-9. FAQ
+Mesmo trabalhando inicialmente com projetos acessíveis, nossa comunicação e nossa entrega devem transmitir qualidade e profissionalismo.
 
-Criar perguntas frequentes como:
+Não utilizamos tecnologia como principal argumento comercial.
 
-A Golly Web cria landing pages personalizadas?
+O foco está no que realmente importa para o cliente:
 
-Sim. Além dos modelos personalizáveis, também desenvolvemos projetos sob medida.
+O resultado final.
 
-Preciso ter domínio?
+⸻
 
-Não necessariamente. A Golly Web pode orientar e configurar o domínio conforme o projeto.
+Identidade visual
 
-A página funciona no celular?
+A identidade da Golly Web possui uma estética predominantemente escura, moderna e tecnológica.
 
-Sim. Todos os projetos devem ser responsivos.
+Paleta
 
-Vocês fazem manutenção?
+* Preto
+* Azul escuro
+* Roxo escuro
+* Branco
 
-Sim. É possível contratar manutenção e alterações após a entrega mediante taxa.
+Gradientes sutis entre azul e roxo podem ser utilizados para criar profundidade e destaque.
 
-Quanto custa uma landing page?
+A identidade evita:
 
-O valor depende do modelo e das necessidades do projeto. Solicite um orçamento.
+* Vermelho
+* Amarelo
+* Laranja
+* Neon excessivo
+* Excesso de glow
+* Visual infantil
+* Aparência genérica de agência
 
-Posso ver exemplos antes de contratar?
+A intenção é construir uma identidade visual premium, minimalista e memorável.
 
-Sim. A seção de modelos permite visualizar demonstrações dos projetos.
+⸻
 
+Site da Golly Web
 
+O site institucional funciona como a principal apresentação digital da empresa.
 
-10. CTA FINAL
+A experiência foi pensada para conduzir o visitante por uma jornada simples:
 
-Criar uma seção visualmente forte antes do rodapé.
+Conhecer a Golly Web → conhecer os serviços → visualizar modelos → entender os diferenciais → conhecer os planos → solicitar orçamento.
 
-Headline:
+Principais seções
 
-“Pronto para transformar sua ideia em uma página incrível?”
+* Hero
+* Soluções
+* Modelos
+* Diferenciais
+* Como funciona
+* Planos
+* Serviços adicionais
+* Depoimentos
+* FAQ
+* Formulário de orçamento
+* CTA final
+* WhatsApp
+* Footer
 
-Texto:
+⸻
 
-“Conte para a Golly Web o que você precisa. A gente cuida do resto.”
+Responsividade
 
-Botões:
+Todos os projetos desenvolvidos pela Golly Web devem priorizar uma boa experiência em:
 
-Solicitar orçamento
+* Mobile
+* Tablet
+* Notebook
+* Desktop
 
-Falar no WhatsApp
+O site da empresa também segue essa abordagem, com layout adaptado para diferentes tamanhos de tela.
 
-Criar fundo escuro com elementos abstratos sutis em azul e roxo.
+⸻
 
+Experiência e performance
 
+A Golly Web busca desenvolver páginas que sejam visualmente marcantes sem prejudicar a experiência do usuário.
 
-11. FORMULÁRIO
+Por isso, utilizamos:
 
-Criar formulário de orçamento com:
+* Layouts responsivos
+* Componentes reutilizáveis
+* Microinterações
+* Animações suaves
+* Transições
+* Estruturas otimizadas
+* Hierarquia visual
+* CTAs estratégicos
 
-Nome
+A estética deve ser sofisticada, sem transformar a página em um excesso de efeitos.
 
-Nome da empresa/marca
+⸻
 
-WhatsApp
+Tecnologias
 
-E-mail
+O site da Golly Web utiliza tecnologias modernas de desenvolvimento web, incluindo:
 
-Tipo de negócio
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Git
+* GitHub
+* Lovable
 
-O que precisa?
+⸻
 
-Qual tipo de landing page deseja?
+Estrutura do projeto
 
-Faixa de investimento
+src/
+├── components/
+├── pages/
+├── assets/
+├── hooks/
+├── lib/
+└── ...
 
-Campo aberto para explicar o projeto
+A estrutura baseada em componentes facilita a manutenção e permite que novas páginas e funcionalidades sejam adicionadas conforme a Golly Web evolui.
 
-Botão:
+⸻
 
-Quero meu orçamento
+Executando localmente
 
-O formulário deve parecer simples e agradável, sem parecer burocrático.
+Pré-requisitos
 
+É necessário ter instalado:
 
+* Node.js
+* npm
 
-12. WHATSAPP
+Clone o repositório
 
-Adicionar botão flutuante de WhatsApp no canto inferior da tela.
+git clone <URL_DO_REPOSITORIO>
 
-Ele deve permanecer visível durante a navegação.
+Entre na pasta
 
-O botão deve ter uma animação discreta ao passar o mouse.
+cd <NOME_DO_REPOSITORIO>
 
+Instale as dependências
 
+npm install
 
-13. FOOTER
+Inicie o projeto
 
-Criar rodapé premium e minimalista.
-
-Logo:
-
-Golly Web
-
-Texto curto:
-
-“Landing pages que transformam ideias em presença digital.”
-
-Links:
-
-Início
-
-Soluções
-
-Modelos
-
-Planos
-
-FAQ
-
-Contato
-
-Adicionar:
-
-WhatsApp
-
-Instagram
-
-E-mail
-
-Utilizar placeholders caso os links ainda não estejam definidos.
-
-
-
-INTERAÇÕES E ANIMAÇÕES
-
-Utilizar microinterações modernas.
-
-Exemplos:
-
-entrada suave dos elementos durante o scroll
-
-hover elegante nos cards
-
-botões com pequenas mudanças de escala
-
-gradientes sutis
-
-movimento leve nos mockups
-
-transições suaves
-
-efeitos de profundidade
-
-Evitar animações exageradas.
-
-O site precisa parecer sofisticado, não um site cheio de efeitos.
-
-RESPONSIVIDADE
-
-O site deve ser completamente responsivo.
-
-Priorizar uma experiência excelente em:
-
-celular
-
-tablet
-
-notebook
-
-desktop
-
-No celular:
-
-menu hamburger
-
-cards reorganizados
-
-textos ajustados
-
-CTAs fáceis de tocar
-
-WhatsApp flutuante
-
-mockups adaptados à tela
-
-EXPERIÊNCIA
-
-A navegação deve ser extremamente intuitiva.
-
-O visitante deve entender em poucos segundos:
-
-O que é a Golly Web → o que ela oferece → exemplos → diferenciais → planos → como contratar.
-
-Criar uma experiência visual semelhante ao nível de apresentação de uma agência digital premium, mas com personalidade própria.
-
-Usar como referência de estrutura e qualidade visual sites modernos de agências digitais, sem copiar identidade visual, textos, layout ou elementos específicos de qualquer empresa existente.
-
-IMPORTANTE
-
-Não criar um site genérico de “empresa de tecnologia”.
-
-Não usar stock photos genéricas de pessoas sorrindo em escritórios.
-
-Priorizar:
-
-mockups de websites
-
-interfaces
-
-elementos abstratos
-
-tipografia
-
-grids
-
-cards
-
-demonstrações reais de landing pages
-
-composição visual sofisticada
-
-A Golly Web deve parecer uma marca digital nova, ousada e premium.
-
-O resultado final deve passar a sensação:
-
-“Se o site da Golly Web é assim, imagina o site que eles podem criar para minha empresa.”
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://golly-web-showcase.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4f9cf292-9103-4582-a541-db385908b39d).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
 npm run dev
-```
+
+O Vite fornecerá o endereço local para acessar a aplicação.
+
+⸻
+
+Site
+
+Golly Web:
+https://golly-web-showcase.lovable.app
+
+⸻
+
+Próximos passos
+
+A Golly Web está em fase de construção e evolução.
+
+Alguns dos próximos objetivos incluem:
+
+* Finalizar identidade visual oficial
+* Definir planos comerciais
+* Adicionar novos modelos de landing pages
+* Criar demonstrações interativas
+* Conseguir os primeiros clientes
+* Adicionar depoimentos reais
+* Configurar domínio oficial
+* Criar canais oficiais de comunicação
+* Integrar formulário de orçamento
+* Melhorar SEO
+* Implementar analytics
+* Expandir o portfólio
+* Criar novas soluções digitais
+
+⸻
+
+Projetos
+
+Cada projeto desenvolvido pela Golly Web pode possuir necessidades diferentes.
+
+Por isso, trabalhamos com soluções que podem ser:
+
+Prontas e personalizáveis
+
+ou
+
+Desenvolvidas sob medida.
+
+A proposta, estrutura e investimento são definidos de acordo com cada projeto.
+
+⸻
+
+Vamos criar sua página?
+
+Se você possui um negócio, marca ou projeto e quer construir uma presença digital profissional, entre em contato com a Golly Web.
+
+Solicite um orçamento e conte o que você precisa.
+
+Golly Web — Landing pages que transformam ideias em presença digital.
+
+⸻
+
+Direitos
+
+© 2026 Golly Web. Todos os direitos reservados.
+
+Este repositório contém o código utilizado no desenvolvimento da presença digital da Golly Web. A utilização comercial, reprodução ou redistribuição dos elementos proprietários da marca depende de autorização.
