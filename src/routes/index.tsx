@@ -766,5 +766,4 @@ function Home() {
 
       <Footer />
     </div>
-  );
 }
