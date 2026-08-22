@@ -1,3 +1,4 @@
+
 export type ModelCategory =
   | "Negócios"
   | "Serviços"
