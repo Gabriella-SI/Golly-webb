@@ -760,7 +760,6 @@ function Home() {
             <Reveal delay={80}>
               <QuoteForm />
             </Reveal>
-          </div>
         </section>
       </main>
 
