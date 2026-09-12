@@ -718,7 +718,7 @@ function Home() {
                   Solicitar orçamento
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-                
+                <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -760,10 +760,11 @@ function Home() {
             <Reveal delay={80}>
               <QuoteForm />
             </Reveal>
+          </div>
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

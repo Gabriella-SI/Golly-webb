@@ -37,7 +37,7 @@ export function Footer() {
         </nav>
 
         <div className="space-y-3 text-sm">
-          
+          <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export function Footer() {
           >
             <MessageCircle className="h-4 w-4" /> WhatsApp
           </a>
-          
+          <a
             href={`mailto:${EMAIL}`}
             className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
           >
