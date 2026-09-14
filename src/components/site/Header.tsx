@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, MessageSquare } from "lucide-react";
 
-export function Cabeçalho() {
+export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
@@ -12,7 +12,6 @@ export function Cabeçalho() {
       return;
     }
 
-    // Procura por ID ou por atributo de dados se o ID direto falhar
     const element = document.getElementById(id) || document.querySelector(`[data-section="${id}"]`);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -31,6 +30,7 @@ export function Cabeçalho() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        {/* Logo */}
         <button
           type="button"
           onClick={() => scrollToSection("inicio")}
@@ -39,6 +39,7 @@ export function Cabeçalho() {
           Golly Web
         </button>
 
+        {/* Links Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <button
@@ -52,6 +53,7 @@ export function Cabeçalho() {
           ))}
         </div>
 
+        {/* Botao de Orcamento */}
         <div className="hidden md:flex items-center">
           <button
             type="button"
@@ -62,6 +64,7 @@ export function Cabeçalho() {
           </button>
         </div>
 
+        {/* Botao Menu Mobile */}
         <div className="md:hidden">
           <button
             type="button"
@@ -74,6 +77,7 @@ export function Cabeçalho() {
         </div>
       </div>
 
+      {/* Dropdown Mobile */}
       {isOpen && (
         <div className="md:hidden bg-slate-950 border-b border-white/10 px-6 py-6 space-y-4">
           {navLinks.map((link) => (
