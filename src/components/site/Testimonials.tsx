@@ -29,23 +29,6 @@ const testimonials = [
 ];
 
 export function Testimonials() {
-  const handleOpenInstagram = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const instagramUrl = "https://www.instagram.com/gollyweb?stkn=MTJxOHBwbDV3YWg2bA%3D%3D&utm_source=qr";
-
-    const newWindow = window.open(instagramUrl, "_blank", "noopener,noreferrer");
-    
-    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
-      if (window.top) {
-        window.top.location.href = instagramUrl;
-      } else {
-        window.location.href = instagramUrl;
-      }
-    }
-  };
-
   return (
     <section id="depoimentos" className="relative py-24 bg-slate-950 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -88,9 +71,10 @@ export function Testimonials() {
 
         <Reveal>
           <div className="mt-16 text-center">
-            <a
-              href="https://www.instagram.com/gollyweb?stkn=MTJxOHBwbDV3YWg2bA%3D%3D&utm_source=qr"
-              onClick={handleOpenInstagram}
+            
+              href="https://www.instagram.com/gollyweb/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-900/60 text-white font-medium border border-white/10 hover:border-purple-500/50 hover:bg-slate-900 transition-all duration-300 cursor-pointer select-none"
             >
               <Instagram className="w-5 h-5 text-purple-400" />
