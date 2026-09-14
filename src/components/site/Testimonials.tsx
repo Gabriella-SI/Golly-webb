@@ -46,13 +46,13 @@ export function Testimonials() {
             {metrics.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div key={idx} className="flex items-center gap-4 bg-slate-900/40 backdrop-blur-xl border border-white/10 p-5 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/30">
-                  <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400">
-                    <Icon className="w-6 h-6" />
+                <div key={idx} className="flex items-center gap-4 bg-slate-900/80 backdrop-blur-xl border border-white/10 p-5 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/40">
+                  <div className="p-3 rounded-xl bg-purple-500/20 border border-purple-500/30 text-purple-300 shrink-0">
+                    <Icon className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white text-sm">{item.title}</h4>
-                    <p className="text-xs text-slate-400">{item.desc}</p>
+                    <h4 className="font-bold text-white text-base leading-snug">{item.title}</h4>
+                    <p className="text-xs text-slate-300 font-medium mt-0.5">{item.desc}</p>
                   </div>
                 </div>
               );
