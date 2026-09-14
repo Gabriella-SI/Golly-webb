@@ -17,25 +17,25 @@ function IndexPage() {
     <div className="bg-slate-950 min-h-screen text-white overflow-hidden selection:bg-purple-500 selection:text-white">
       <Header />
       <main>
-        <div id="inicio">
+        <section id="inicio" data-section="solucoes">
           <HeroMockup />
-        </div>
+        </section>
 
-        <div id="solucoes">
+        <section id="modelos">
           <ModelsSection />
-        </div>
+        </section>
 
-        <div id="como-funciona">
+        <section id="como-funciona">
           <ProcessStep />
-        </div>
+        </section>
 
-        <div id="planos">
+        <section id="planos" data-section="depoimentos">
           <Testimonials />
-        </div>
+        </section>
 
-        <div id="faq">
+        <section id="orcamento" data-section="faq">
           <QuoteForm />
-        </div>
+        </section>
       </main>
       <Footer />
       <WhatsAppFab />
