@@ -39,7 +39,7 @@ export function QuoteForm() {
               Vamos tirar seu projeto do papel?
             </h2>
             <p className="text-slate-400 mt-3 text-sm md:text-base">
-              Preencha os campos abaixo e clique para iniciar o atendimento no WhatsApp.
+              Preencha os campos abaixo para iniciar o atendimento.
             </p>
           </div>
         </Reveal>
@@ -115,6 +115,8 @@ export function QuoteForm() {
 
               <a
                 href={whatsappUrl}
+                target="_top"
+                rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 text-center block"
               >
                 Enviar Orçamento pelo WhatsApp <Send className="w-4 h-4" />
