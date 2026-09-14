@@ -3,7 +3,7 @@ import { Zap, ShieldCheck, Sparkles } from "lucide-react";
 
 export function HeroMockup() {
   return (
-    <div className="relative pb-6 pl-4 pr-2 pt-2 sm:pb-10 sm:pl-8">
+    <section id="inicio" data-section="solucoes" className="relative pb-6 pl-4 pr-2 pt-2 sm:pb-10 sm:pl-8">
       <div
         className="pointer-events-none absolute -inset-10 -z-10 opacity-70 blur-3xl"
         style={{
@@ -139,6 +139,6 @@ export function HeroMockup() {
           </div>
         </div>
       </BrowserFrame>
-    </div>
+    </section>
   );
 }
