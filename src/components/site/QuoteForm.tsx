@@ -21,7 +21,6 @@ export function QuoteForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Texto formatado para o WhatsApp
     const textMessage =
       `*Novo Pedido de Orçamento - Golly Web*\n\n` +
       `*Nome:* ${formData.name}\n` +
@@ -30,11 +29,11 @@ export function QuoteForm() {
       `*Tipo de Projeto:* ${formData.projectType}\n` +
       `*Mensagem:* ${formData.message || "Sem mensagem extra"}`;
 
-    const whatsappUrl = `https://wa.me/5583998763599?text=${encodeURIComponent(
+    // Número corrigido: 5583998673599
+    const whatsappUrl = `https://wa.me/5583998673599?text=${encodeURIComponent(
       textMessage
     )}`;
 
-    // Abre o WhatsApp do cliente com os dados preenchidos
     window.open(whatsappUrl, "_blank");
     setSubmitted(true);
   };
@@ -108,7 +107,7 @@ export function QuoteForm() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="(83) 99999-9999"
+                      placeholder="(83) 99867-3599"
                       className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors"
                     />
                   </div>
