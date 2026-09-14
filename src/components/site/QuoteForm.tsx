@@ -17,24 +17,22 @@ export function QuoteForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleOpenWhatsApp = (e: React.MouseEvent) => {
+  const handleOpenWhatsApp = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
     e.preventDefault();
+    e.stopPropagation();
 
-    const textMessage =
-      `Olá! Vim pelo site da Golly Web.\n\n` +
-      `Nome: ${formData.name || "Não informado"}\n` +
-      `Email: ${formData.email || "Não informado"}\n` +
-      `Telefone: ${formData.phone || "Não informado"}\n` +
-      `Projeto: ${formData.projectType}\n` +
-      `Mensagem: ${formData.message || "Sem mensagem"}`;
+    const whatsappUrl = "https://wa.me/message/XMNL46P6JIWJC1";
 
-    const whatsappUrl = `https://wa.me/5583998673599?text=${encodeURIComponent(textMessage)}`;
-
-    // Força a navegação da janela principal sem ser interceptada por iFrames ou formulários
-    if (window.top) {
-      window.top.location.href = whatsappUrl;
-    } else {
-      window.location.href = whatsappUrl;
+    // Tenta abrir em nova aba de forma nativa e segura
+    const newWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    
+    // Fallback se o navegador/iframe bloquear a nova aba
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+      if (window.top) {
+        window.top.location.href = whatsappUrl;
+      } else {
+        window.location.href = whatsappUrl;
+      }
     }
   };
 
@@ -124,13 +122,13 @@ export function QuoteForm() {
                 />
               </div>
 
-              <button
-                type="button"
+              <a
+                href="https://wa.me/message/XMNL46P6JIWJC1"
                 onClick={handleOpenWhatsApp}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-center block select-none"
               >
                 Enviar Orçamento pelo WhatsApp <Send className="w-4 h-4" />
-              </button>
+              </a>
             </form>
           </div>
         </Reveal>
