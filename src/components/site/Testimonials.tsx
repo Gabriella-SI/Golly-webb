@@ -29,14 +29,20 @@ const testimonials = [
 ];
 
 export function Testimonials() {
-  const handleOpenInstagram = (e: React.MouseEvent) => {
+  const handleOpenInstagram = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    e.stopPropagation();
+
     const instagramUrl = "https://www.instagram.com/gollyweb?stkn=MTJxOHBwbDV3YWg2bA%3D%3D&utm_source=qr";
+
+    const newWindow = window.open(instagramUrl, "_blank", "noopener,noreferrer");
     
-    if (window.top) {
-      window.top.location.href = instagramUrl;
-    } else {
-      window.location.href = instagramUrl;
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+      if (window.top) {
+        window.top.location.href = instagramUrl;
+      } else {
+        window.location.href = instagramUrl;
+      }
     }
   };
 
@@ -82,14 +88,14 @@ export function Testimonials() {
 
         <Reveal>
           <div className="mt-16 text-center">
-            <button
-              type="button"
+            <a
+              href="https://www.instagram.com/gollyweb?stkn=MTJxOHBwbDV3YWg2bA%3D%3D&utm_source=qr"
               onClick={handleOpenInstagram}
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-900/60 text-white font-medium border border-white/10 hover:border-purple-500/50 hover:bg-slate-900 transition-all duration-300 cursor-pointer"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-900/60 text-white font-medium border border-white/10 hover:border-purple-500/50 hover:bg-slate-900 transition-all duration-300 cursor-pointer select-none"
             >
               <Instagram className="w-5 h-5 text-purple-400" />
               Siga o Instagram <span className="text-purple-300 font-bold">@gollyweb</span>
-            </button>
+            </a>
           </div>
         </Reveal>
       </div>
