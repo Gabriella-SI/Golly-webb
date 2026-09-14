@@ -67,7 +67,7 @@ export function HeroMockup() {
 
         <div className="relative">
           <div className="absolute inset-6 bg-gradient-to-tr from-purple-600/30 to-blue-600/30 blur-3xl rounded-[3rem] pointer-events-none" />
-          <div className="relative">
+          <div className="relative animate-float">
             <BrowserFrame url="gollyweb.com/sua-marca">
               <div className="bg-slate-950 p-8 space-y-5">
                 <span className="inline-block text-[10px] font-semibold uppercase tracking-[0.2em] text-purple-400">
