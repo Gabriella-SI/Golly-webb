@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { HeroMockup } from "@/components/site/HeroMockup";
+import { SolutionsSection } from "@/components/site/SolutionsSection";
 import { ModelsSection } from "@/components/site/ModelsSection";
 import { ProcessStep } from "@/components/site/ProcessStep";
+import { PlansSection } from "@/components/site/PlansSection";
 import { Testimonials } from "@/components/site/Testimonials";
+import { FaqSection } from "@/components/site/FaqSection";
 import { QuoteForm } from "@/components/site/QuoteForm";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
@@ -17,25 +20,14 @@ function IndexPage() {
     <div className="bg-slate-950 min-h-screen text-white overflow-hidden selection:bg-purple-500 selection:text-white">
       <Header />
       <main>
-        <section id="inicio" data-section="solucoes">
-          <HeroMockup />
-        </section>
-
-        <section id="modelos">
-          <ModelsSection />
-        </section>
-
-        <section id="como-funciona">
-          <ProcessStep />
-        </section>
-
-        <section id="planos" data-section="depoimentos">
-          <Testimonials />
-        </section>
-
-        <section id="orcamento" data-section="faq">
-          <QuoteForm />
-        </section>
+        <HeroMockup />
+        <SolutionsSection />
+        <ModelsSection />
+        <ProcessStep />
+        <PlansSection />
+        <Testimonials />
+        <FaqSection />
+        <QuoteForm />
       </main>
       <Footer />
       <WhatsAppFab />
