@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,12 +10,19 @@ export function Footer() {
             Landing pages digitais que transformam visitantes em clientes.
           </p>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="mailto:gollyweeb@gmail.com"
+            className="flex items-center gap-2 text-xs text-slate-300 hover:text-purple-400 transition-colors bg-slate-900/60 px-4 py-2 rounded-full border border-white/10"
+          >
+            <Mail className="w-4 h-4 text-purple-400" />
+            gollyweeb@gmail.com
+          </a>
           <a
             href="https://instagram.com/Gollyweb"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-slate-300 hover:text-purple-400 transition-colors bg-slate-900/60 px-4 py-2 rounded-full border border-white/10"
+            className="flex items-center gap-2 text-xs text-slate-300 hover:text-purple-400 transition-colors bg-slate-900/60 px-4 py-2 rounded-full border border-white/10"
           >
             <Instagram className="w-4 h-4 text-purple-400" />
             @Gollyweb
