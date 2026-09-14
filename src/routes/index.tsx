@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
 import { HeroMockup } from "@/components/site/HeroMockup";
+import { ModelPreview } from "@/components/site/ModelPreview";
 import { ProcessStep } from "@/components/site/ProcessStep";
 import { Testimonials } from "@/components/site/Testimonials";
 import { QuoteForm } from "@/components/site/QuoteForm";
-import { ModelPreview } from "@/components/site/ModelPreview";
+import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 
 export const Route = createFileRoute("/")({
@@ -13,11 +15,15 @@ export const Route = createFileRoute("/")({
 function IndexPage() {
   return (
     <div className="bg-slate-950 min-h-screen text-white overflow-hidden selection:bg-purple-500 selection:text-white">
-      <HeroMockup />
-      <ModelPreview />
-      <ProcessStep />
-      <Testimonials />
-      <QuoteForm />
+      <Header />
+      <main>
+        <HeroMockup />
+        <ModelPreview />
+        <ProcessStep />
+        <Testimonials />
+        <QuoteForm />
+      </main>
+      <Footer />
       <WhatsAppFab />
     </div>
   );
