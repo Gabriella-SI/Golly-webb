@@ -17,25 +17,6 @@ export function QuoteForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleOpenWhatsApp = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const whatsappUrl = "https://wa.me/message/XMNL46P6JIWJC1";
-
-    // Tenta abrir em nova aba de forma nativa e segura
-    const newWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    
-    // Fallback se o navegador/iframe bloquear a nova aba
-    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
-      if (window.top) {
-        window.top.location.href = whatsappUrl;
-      } else {
-        window.location.href = whatsappUrl;
-      }
-    }
-  };
-
   return (
     <section id="orcamento" className="py-24 bg-slate-950 text-white relative overflow-hidden">
       <div className="max-w-3xl mx-auto px-6 relative z-10">
@@ -122,9 +103,10 @@ export function QuoteForm() {
                 />
               </div>
 
-              <a
+              
                 href="https://wa.me/message/XMNL46P6JIWJC1"
-                onClick={handleOpenWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-center block select-none"
               >
                 Enviar Orçamento pelo WhatsApp <Send className="w-4 h-4" />
