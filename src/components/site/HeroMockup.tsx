@@ -1,5 +1,4 @@
-import { ArrowRight, MessageSquare, Sparkles, TrendingUp, Zap } from "lucide-react";
-import { BrowserFrame } from "@/components/site/BrowserFrame";
+import { ArrowRight, MessageSquare, TrendingUp } from "lucide-react";
 
 const WHATSAPP_URL =
   "https://wa.me/5583998673599?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Golly%20Web%20e%20gostaria%20de%20um%20or%C3%A7amento.";
@@ -10,135 +9,143 @@ const stats = [
   { value: "+90", label: "Nota performance" },
 ];
 
+const features = [
+  { title: "Design próprio", text: "Visual único da sua marca" },
+  { title: "Conversão", text: "Textos que geram contato" },
+  { title: "Velocidade", text: "Abre em menos de 1s" },
+];
+
 export function HeroMockup() {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <section id="inicio" className="relative px-4 pt-28 pb-28 md:pt-36">
-      {/* auras flutuantes */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="animate-drift absolute -top-24 left-[12%] h-[26rem] w-[26rem] rounded-full bg-violet/25 blur-[120px]" />
-        <div className="animate-glow absolute top-32 right-[6%] h-[30rem] w-[30rem] rounded-full bg-primary/25 blur-[130px]" />
-        <div className="grid-lines absolute inset-0 opacity-[0.25] [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
+    <section
+      id="inicio"
+      className="relative flex items-center justify-center overflow-hidden px-6 pt-32 pb-24 md:pt-40 md:pb-32"
+    >
+      {/* brilhos ambiente */}
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-full w-full max-w-6xl -translate-x-1/2 -translate-y-1/2">
+        <div className="animate-glow absolute top-1/4 -right-20 h-96 w-96 rounded-full bg-violet/20 blur-[120px]" />
+        <div className="animate-drift absolute bottom-1/4 -left-20 h-96 w-96 rounded-full bg-primary/15 blur-[120px]" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl">
-        <div className="float-panel relative px-6 py-12 md:px-12 md:py-16">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/5 px-4 py-2 text-[11px] font-medium tracking-wide text-muted-foreground backdrop-blur">
-                <Sparkles className="h-3.5 w-3.5 text-violet" />
-                Landing pages de alta conversão
-              </span>
+      {/* painel de vidro principal */}
+      <div className="relative flex w-full max-w-6xl flex-col items-center gap-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-8 shadow-[0_60px_120px_-50px_rgba(0,0,0,0.95)] backdrop-blur-2xl lg:flex-row lg:p-16">
+        <div className="grid-lines pointer-events-none absolute inset-0 opacity-20" />
 
-              <h1 className="mt-7 text-4xl leading-[1.03] font-black md:text-6xl">
-                Seu negócio merece mais do que{" "}
-                <span className="text-gradient">uma página</span>
-              </h1>
+        {/* conteúdo */}
+        <div className="relative z-10 flex-1">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-violet" />
+            <span className="font-mono text-[11px] font-medium tracking-[0.14em] text-foreground/80 uppercase">
+              Landing pages de alta conversão
+            </span>
+          </div>
 
-              <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-                Páginas rápidas, elegantes e feitas para transformar visitantes em clientes.
-                Design sob medida, animações suaves e foco total em resultado.
-              </p>
+          <h1 className="mb-6 font-display text-4xl leading-[1.08] font-bold text-foreground md:text-5xl lg:text-6xl">
+            Seu negócio merece mais do que <span className="text-gradient">uma página</span>
+          </h1>
 
-              <div className="mt-9 flex flex-wrap gap-4">
-                <button
-                  type="button"
-                  onClick={() => scrollTo("orcamento")}
-                  className="float-lift glow-brand bg-brand-gradient flex cursor-pointer items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:float-lift-hover"
-                >
-                  Solicitar orçamento <ArrowRight className="h-4 w-4" />
-                </button>
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="float-lift flex items-center gap-2 rounded-full border border-border bg-white/5 px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur hover:float-lift-hover"
-                >
-                  <MessageSquare className="h-4 w-4 text-emerald-400" /> Falar no WhatsApp
-                </a>
+          <p className="mb-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            Páginas rápidas, elegantes e feitas para transformar visitantes em clientes. Design sob
+            medida, animações suaves e foco total em resultado.
+          </p>
+
+          <div className="mb-12 flex flex-wrap gap-4">
+            <button
+              type="button"
+              onClick={() => scrollTo("orcamento")}
+              className="float-lift glow-brand bg-brand-gradient flex cursor-pointer items-center gap-2 rounded-2xl px-8 py-4 font-display font-semibold text-primary-foreground hover:float-lift-hover active:scale-95"
+            >
+              Solicitar orçamento <ArrowRight className="h-4 w-4" />
+            </button>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="float-lift flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-8 py-4 font-display font-semibold text-foreground backdrop-blur hover:float-lift-hover active:scale-95"
+            >
+              <MessageSquare className="h-4 w-4 text-emerald-400" /> Falar no WhatsApp
+            </a>
+          </div>
+
+          <div className="grid grid-cols-3 gap-8 border-t border-white/10 pt-8">
+            {stats.map((item) => (
+              <div key={item.label}>
+                <div className="font-display text-2xl font-bold text-foreground">{item.value}</div>
+                <div className="font-mono text-[10px] tracking-[0.16em] text-muted-foreground uppercase">
+                  {item.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* visual */}
+        <div className="relative z-10 w-full flex-1">
+          <div className="group relative">
+            <div className="pointer-events-none absolute -top-6 -right-6 h-24 w-24 rounded-2xl bg-violet/15 blur-xl transition-all group-hover:blur-2xl" />
+            <div className="pointer-events-none absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-primary/15 blur-xl transition-all group-hover:blur-2xl" />
+
+            <div className="animate-float relative overflow-hidden rounded-2xl border border-white/20 bg-background shadow-[0_50px_90px_-40px_rgba(0,0,0,0.95)] transition-transform duration-700 group-hover:rotate-0 lg:rotate-2">
+              <div className="flex h-9 items-center gap-1.5 border-b border-white/10 bg-white/5 px-4">
+                <span className="h-2 w-2 rounded-full bg-white/20" />
+                <span className="h-2 w-2 rounded-full bg-white/20" />
+                <span className="h-2 w-2 rounded-full bg-white/20" />
+                <span className="ml-3 flex-1 truncate rounded-md bg-background/70 px-3 py-1 font-mono text-[10px] text-muted-foreground">
+                  gollyweb.com/sua-marca
+                </span>
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-3">
-                {stats.map((item) => (
-                  <div
-                    key={item.label}
-                    className="float-card float-lift px-5 py-3 hover:float-lift-hover"
-                  >
-                    <p className="text-xl font-black">{item.value}</p>
-                    <p className="text-[11px] text-muted-foreground">{item.label}</p>
-                  </div>
-                ))}
+              <div className="space-y-5 bg-gradient-to-br from-white/5 to-transparent p-7">
+                <span className="font-mono text-[10px] font-medium tracking-[0.22em] text-violet uppercase">
+                  Sua marca
+                </span>
+                <h3 className="font-display text-xl leading-tight font-bold">
+                  Atendimento premium para quem quer resultado
+                </h3>
+                <p className="text-xs leading-relaxed text-muted-foreground">
+                  Uma página feita para apresentar o seu serviço e receber contatos todos os dias.
+                </p>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <span className="bg-brand-gradient rounded-full px-4 py-2 font-display text-[11px] font-semibold text-primary-foreground">
+                    Quero um orçamento
+                  </span>
+                  <span className="rounded-full border border-white/10 px-4 py-2 font-display text-[11px] font-semibold text-foreground">
+                    Ver serviços
+                  </span>
+                </div>
+                <div className="grid grid-cols-3 gap-3 pt-2">
+                  {features.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-white/10 bg-white/5 p-3"
+                    >
+                      <p className="font-display text-[11px] font-bold">{item.title}</p>
+                      <p className="mt-1 text-[10px] leading-snug text-muted-foreground">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* pilha flutuante */}
-            <div className="relative">
-              <div className="animate-float relative z-10 [--float-rotate:-2deg]">
-                <BrowserFrame
-                  url="gollyweb.com/sua-marca"
-                  className="rounded-[1.75rem] shadow-[0_50px_90px_-40px_rgba(0,0,0,0.95)]"
-                >
-                  <div className="space-y-5 bg-background/80 p-7">
-                    <span className="text-[10px] font-semibold tracking-[0.22em] text-violet uppercase">
-                      Sua marca
-                    </span>
-                    <h3 className="text-xl leading-tight font-black">
-                      Atendimento premium para quem quer resultado
-                    </h3>
-                    <p className="text-xs leading-relaxed text-muted-foreground">
-                      Uma página feita para apresentar o seu serviço e receber contatos todos os
-                      dias.
-                    </p>
-                    <div className="flex flex-wrap gap-3 pt-1">
-                      <span className="bg-brand-gradient rounded-full px-4 py-2 text-[11px] font-semibold text-primary-foreground">
-                        Quero um orçamento
-                      </span>
-                      <span className="rounded-full border border-border px-4 py-2 text-[11px] font-semibold text-foreground">
-                        Ver serviços
-                      </span>
-                    </div>
-                    <div className="grid grid-cols-3 gap-3 pt-3">
-                      {[
-                        { title: "Design próprio", text: "Visual único da sua marca" },
-                        { title: "Conversão", text: "Textos que geram contato" },
-                        { title: "Velocidade", text: "Abre em menos de 1s" },
-                      ].map((item) => (
-                        <div
-                          key={item.title}
-                          className="rounded-xl border border-border bg-white/5 p-3"
-                        >
-                          <p className="text-[11px] font-bold">{item.title}</p>
-                          <p className="mt-1 text-[10px] leading-snug text-muted-foreground">
-                            {item.text}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </BrowserFrame>
-              </div>
-
-              {/* cartão flutuante sobreposto */}
-              <div className="animate-float-medium animate-delay-1 float-card absolute -bottom-8 -left-6 z-20 hidden w-52 items-center gap-3 p-4 sm:flex">
-                <span className="bg-brand-gradient rounded-xl p-2.5">
+            {/* cartão flutuante */}
+            <div className="animate-float-medium animate-delay-1 absolute -right-4 -bottom-10 hidden rounded-2xl border border-white/20 bg-white/10 p-4 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.9)] backdrop-blur-md md:block">
+              <div className="flex items-center gap-3">
+                <span className="bg-brand-gradient flex h-10 w-10 items-center justify-center rounded-full">
                   <TrendingUp className="h-4 w-4 text-primary-foreground" />
                 </span>
                 <div>
-                  <p className="text-sm font-black">+38%</p>
-                  <p className="text-[10px] text-muted-foreground">de contatos no 1º mês</p>
+                  <div className="font-mono text-[10px] font-medium tracking-[0.16em] text-muted-foreground uppercase">
+                    Conversão
+                  </div>
+                  <div className="font-display text-lg font-bold text-foreground">+32,5%</div>
                 </div>
               </div>
-
-              <div className="animate-float-reverse animate-delay-2 float-card absolute -top-7 -right-4 z-20 hidden items-center gap-2 px-4 py-3 md:flex">
-                <Zap className="h-4 w-4 text-violet" />
-                <p className="text-[11px] font-semibold">0,8s para carregar</p>
-              </div>
-
-              {/* reflexo */}
-              <div className="pointer-events-none absolute -bottom-16 left-8 right-8 h-24 rounded-[50%] bg-primary/25 blur-2xl" />
             </div>
           </div>
         </div>
