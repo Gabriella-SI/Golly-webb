@@ -12,9 +12,19 @@ export function Cabeçalho() {
       return;
     }
 
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    const findAndScroll = () => {
+      const element = document.getElementById(id) || document.querySelector(`[data-section="${id}"]`);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        return true;
+      }
+      return false;
+    };
+
+    if (!findAndScroll()) {
+      setTimeout(() => {
+        findAndScroll();
+      }, 50);
     }
   };
 
@@ -32,8 +42,9 @@ export function Cabeçalho() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <button
+          type="button"
           onClick={() => scrollToSection("inicio")}
-          className="text-2xl font-black bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer"
+          className="text-2xl font-black bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer border-none bg-transparent"
         >
           Golly Web
         </button>
@@ -43,8 +54,9 @@ export function Cabeçalho() {
           {navLinks.map((link) => (
             <button
               key={link.id}
+              type="button"
               onClick={() => scrollToSection(link.id)}
-              className="text-sm font-medium text-slate-300 hover:text-white transition-colors cursor-pointer"
+              className="text-sm font-medium text-slate-300 hover:text-white transition-colors cursor-pointer border-none bg-transparent"
             >
               {link.name}
             </button>
@@ -54,8 +66,9 @@ export function Cabeçalho() {
         {/* Botão de Orçamento */}
         <div className="hidden md:flex items-center">
           <button
+            type="button"
             onClick={() => scrollToSection("orcamento")}
-            className="px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold text-xs transition-all shadow-md cursor-pointer flex items-center gap-2"
+            className="px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold text-xs transition-all shadow-md cursor-pointer flex items-center gap-2 border-none"
           >
             <MessageSquare className="w-4 h-4" /> Orçamento
           </button>
@@ -64,8 +77,9 @@ export function Cabeçalho() {
         {/* Botão Menu Mobile */}
         <div className="md:hidden">
           <button
+            type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="text-slate-300 hover:text-white focus:outline-none"
+            className="text-slate-300 hover:text-white focus:outline-none border-none bg-transparent"
             aria-label="Abrir menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -79,15 +93,17 @@ export function Cabeçalho() {
           {navLinks.map((link) => (
             <button
               key={link.id}
+              type="button"
               onClick={() => scrollToSection(link.id)}
-              className="block w-full text-left text-base font-medium text-slate-300 hover:text-white py-2"
+              className="block w-full text-left text-base font-medium text-slate-300 hover:text-white py-2 border-none bg-transparent"
             >
               {link.name}
             </button>
           ))}
           <button
+            type="button"
             onClick={() => scrollToSection("orcamento")}
-            className="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-sm text-center flex items-center justify-center gap-2 mt-4"
+            className="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-sm text-center flex items-center justify-center gap-2 mt-4 border-none"
           >
             <MessageSquare className="w-4 h-4" /> Solicitar Orçamento
           </button>
