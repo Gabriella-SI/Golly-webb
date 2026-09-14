@@ -12,33 +12,18 @@ export function Header() {
       return;
     }
 
-    const executeScroll = () => {
-      // Tenta encontrar por ID direto ou por atributo data-section
-      let element =
-        document.getElementById(id) ||
-        document.querySelector(`[data-section="${id}"]`);
+    const targetId =
+      id === "solucoes" ? "inicio" :
+      id === "planos" ? "depoimentos" :
+      id === "faq" ? "orcamento" : id;
 
-      // Mapeamento de reserva caso o elemento específico use nome parecido
-      if (!element) {
-        if (id === "solucoes") {
-          element = document.getElementById("inicio") || document.querySelector("main");
-        } else if (id === "planos") {
-          element = document.getElementById("depoimentos") || document.querySelector("section:nth-of-type(4)");
-        } else if (id === "faq") {
-          element = document.getElementById("orcamento");
-        }
-      }
+    const element =
+      document.getElementById(id) ||
+      document.getElementById(targetId) ||
+      document.querySelector(`[data-section="${id}"]`);
 
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-        return true;
-      }
-      return false;
-    };
-
-    // Tenta imediatamente; se o DOM ainda não respondeu, tenta após 50ms
-    if (!executeScroll()) {
-      setTimeout(executeScroll, 50);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
