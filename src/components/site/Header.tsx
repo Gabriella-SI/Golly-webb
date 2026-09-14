@@ -6,15 +6,39 @@ export function Header() {
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
-    
+
     if (id === "inicio") {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    const element = document.getElementById(id) || document.querySelector(`[data-section="${id}"]`);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    const executeScroll = () => {
+      // Tenta encontrar por ID direto ou por atributo data-section
+      let element =
+        document.getElementById(id) ||
+        document.querySelector(`[data-section="${id}"]`);
+
+      // Mapeamento de reserva caso o elemento específico use nome parecido
+      if (!element) {
+        if (id === "solucoes") {
+          element = document.getElementById("inicio") || document.querySelector("main");
+        } else if (id === "planos") {
+          element = document.getElementById("depoimentos") || document.querySelector("section:nth-of-type(4)");
+        } else if (id === "faq") {
+          element = document.getElementById("orcamento");
+        }
+      }
+
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        return true;
+      }
+      return false;
+    };
+
+    // Tenta imediatamente; se o DOM ainda não respondeu, tenta após 50ms
+    if (!executeScroll()) {
+      setTimeout(executeScroll, 50);
     }
   };
 
