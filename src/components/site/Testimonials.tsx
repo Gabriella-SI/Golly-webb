@@ -30,7 +30,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="depoimentos" className="relative py-24 bg-slate-950 text-white overflow-hidden">
+    <section id="planos" data-section="depoimentos" className="relative py-24 bg-slate-950 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -71,7 +71,7 @@ export function Testimonials() {
 
         <Reveal>
           <div className="mt-16 text-center">
-            
+            <a
               href="https://www.instagram.com/gollyweb/"
               target="_blank"
               rel="noopener noreferrer"
