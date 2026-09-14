@@ -17,11 +17,30 @@ function IndexPage() {
     <div className="bg-slate-950 min-h-screen text-white overflow-hidden selection:bg-purple-500 selection:text-white">
       <Header />
       <main>
-        <HeroMockup />
-        <ModelsSection />
-        <ProcessStep />
-        <Testimonials />
-        <QuoteForm />
+        {/* Seção Início */}
+        <section id="inicio">
+          <HeroMockup />
+        </section>
+
+        {/* Seção Soluções (aponta para Hero/Recursos por enquanto) */}
+        <section id="solucoes">
+          <ModelsSection />
+        </section>
+
+        {/* Seção Como Funciona */}
+        <section id="como-funciona">
+          <ProcessStep />
+        </section>
+
+        {/* Seção Planos (aponta para Depoimentos/Preços por enquanto) */}
+        <section id="planos">
+          <Testimonials />
+        </section>
+
+        {/* Seção FAQ & Orçamento */}
+        <section id="faq">
+          <QuoteForm />
+        </section>
       </main>
       <Footer />
       <WhatsAppFab />
