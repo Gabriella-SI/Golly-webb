@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { HeroMockup } from "@/components/site/HeroMockup";
-import { ModelPreview } from "@/components/site/ModelPreview";
+import { ModelsSection } from "@/components/site/ModelsSection";
 import { ProcessStep } from "@/components/site/ProcessStep";
 import { Testimonials } from "@/components/site/Testimonials";
 import { QuoteForm } from "@/components/site/QuoteForm";
@@ -18,7 +18,7 @@ function IndexPage() {
       <Header />
       <main>
         <HeroMockup />
-        <ModelPreview />
+        <ModelsSection />
         <ProcessStep />
         <Testimonials />
         <QuoteForm />
