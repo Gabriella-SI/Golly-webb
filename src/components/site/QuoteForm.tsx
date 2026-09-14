@@ -18,7 +18,7 @@ export function QuoteForm() {
   };
 
   return (
-    <section id="orcamento" className="py-24 bg-slate-950 text-white relative overflow-hidden">
+    <section id="orcamento" data-section="faq" className="py-24 bg-slate-950 text-white relative overflow-hidden">
       <div className="max-w-3xl mx-auto px-6 relative z-10">
         <Reveal>
           <div className="text-center mb-12">
@@ -103,7 +103,7 @@ export function QuoteForm() {
                 />
               </div>
 
-              
+              <a
                 href="https://wa.me/message/XMNL46P6JIWJC1"
                 target="_blank"
                 rel="noopener noreferrer"
