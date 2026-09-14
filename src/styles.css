@@ -264,3 +264,22 @@
 @utility animate-drift {
   animation: drift 9s ease-in-out infinite;
 }
+/* Efeitos adicionais para o Glow Flutuante */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+@utility animate-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+@utility animate-float-delayed {
+  animation: float-slow 6s ease-in-out 3s infinite;
+}
