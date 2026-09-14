@@ -23,7 +23,7 @@ export function HeroMockup() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-28 pb-24 md:pt-32"
+      className="relative flex items-center justify-center overflow-hidden px-6 pt-32 pb-24 md:pt-40 md:pb-32"
     >
       {/* brilhos ambiente */}
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-full w-full max-w-6xl -translate-x-1/2 -translate-y-1/2">
@@ -134,7 +134,7 @@ export function HeroMockup() {
             </div>
 
             {/* cartão flutuante */}
-            <div className="animate-float-medium animate-delay-1 absolute -right-4 -bottom-8 hidden rounded-2xl border border-white/20 bg-white/10 p-4 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.9)] backdrop-blur-md md:block">
+            <div className="animate-float-medium animate-delay-1 absolute -right-4 -bottom-10 hidden rounded-2xl border border-white/20 bg-white/10 p-4 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.9)] backdrop-blur-md md:block">
               <div className="flex items-center gap-3">
                 <span className="bg-brand-gradient flex h-10 w-10 items-center justify-center rounded-full">
                   <TrendingUp className="h-4 w-4 text-primary-foreground" />
