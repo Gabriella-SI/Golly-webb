@@ -70,16 +70,36 @@ export function HeroMockup() {
           <div className="relative">
             <BrowserFrame url="gollyweb.com/sua-marca">
               <div className="bg-slate-950 p-8 space-y-5">
-                <div className="h-2.5 w-24 rounded-full bg-purple-500/60" />
-                <div className="h-6 w-3/4 rounded-lg bg-white/20" />
-                <div className="h-6 w-1/2 rounded-lg bg-white/10" />
-                <div className="flex gap-3 pt-2">
-                  <div className="h-9 w-32 rounded-full bg-gradient-to-r from-purple-600 to-blue-600" />
-                  <div className="h-9 w-24 rounded-full border border-white/15" />
+                <span className="inline-block text-[10px] font-semibold uppercase tracking-[0.2em] text-purple-400">
+                  Sua marca
+                </span>
+                <h3 className="text-xl font-black leading-tight text-white">
+                  Atendimento premium para quem quer resultado
+                </h3>
+                <p className="text-xs leading-relaxed text-slate-400">
+                  Uma página feita para apresentar o seu serviço e receber contatos todos os dias.
+                </p>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <span className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 text-[11px] font-semibold text-white">
+                    Quero um orçamento
+                  </span>
+                  <span className="rounded-full border border-white/15 px-4 py-2 text-[11px] font-semibold text-slate-200">
+                    Ver serviços
+                  </span>
                 </div>
                 <div className="grid grid-cols-3 gap-3 pt-4">
-                  {[0, 1, 2].map((i) => (
-                    <div key={i} className="h-20 rounded-xl bg-white/5 border border-white/10" />
+                  {[
+                    { title: "Design próprio", text: "Visual único da sua marca" },
+                    { title: "Conversão", text: "Textos que geram contato" },
+                    { title: "Velocidade", text: "Abre em menos de 1s" },
+                  ].map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-white/10 bg-white/5 p-3"
+                    >
+                      <p className="text-[11px] font-bold text-white">{item.title}</p>
+                      <p className="mt-1 text-[10px] leading-snug text-slate-400">{item.text}</p>
+                    </div>
                   ))}
                 </div>
               </div>
