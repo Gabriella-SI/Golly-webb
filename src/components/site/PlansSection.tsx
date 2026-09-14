@@ -3,22 +3,22 @@ import { Reveal } from "./Reveal";
 
 const plans = [
   {
-    name: "Standard",
-    price: "R$ 497",
+    name: "Padrão",
+    price: "R$ 250",
     description: "Perfeito para quem busca uma página rápida e eficiente.",
     features: ["Landing Page Essencial", "Design Responsivo", "Otimização de Velocidade", "Botões para WhatsApp"],
     popular: false,
   },
   {
-    name: "Premium Flutuante",
-    price: "R$ 897",
+    name: "Premium",
+    price: "R$ 400",
     description: "A escolha ideal para se destacar totalmente da concorrência.",
     features: ["Design Exclusivo e Animações", "Análise de Copy / Texto", "Integração com Métricas", "Domínio e SSL Inclusos", "Suporte Prioritário"],
     popular: true,
   },
   {
     name: "Personalizado",
-    price: "Sob Consulta",
+    price: "Sob consulta",
     description: "Para projetos sob medida, sistemas e necessidades específicas.",
     features: ["Multi-páginas / E-commerce", "Painel Administrativo", "Integrações de API", "Consultoria Estratégica"],
     popular: false,
