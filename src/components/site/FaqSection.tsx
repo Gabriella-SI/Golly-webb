@@ -38,7 +38,11 @@ export function FaqSection() {
         <Reveal>
           <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border border-white/10 rounded-2xl px-6 bg-slate-900/30">
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="float-card px-6 hover:float-lift-hover hover:border-purple-500/40"
+              >
                 <AccordionTrigger className="text-left text-base font-semibold py-4 hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>

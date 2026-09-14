@@ -46,7 +46,7 @@ export function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((item, index) => (
             <Reveal key={index}>
-              <div className="group relative rounded-2xl bg-slate-900/40 backdrop-blur-xl border border-white/10 p-8 shadow-xl transition-all duration-300 flex flex-col justify-between h-full">
+              <div className="float-card group relative flex h-full flex-col justify-between p-8 hover:float-lift-hover hover:border-purple-500/40">
                 <div>
                   <div className="flex justify-between items-center mb-6">
                     <span className="text-xs font-medium text-purple-300 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
