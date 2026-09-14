@@ -17,15 +17,26 @@ export function QuoteForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const textMessage =
-    `Olá! Vim pelo site da Golly Web.\n\n` +
-    `Nome: ${formData.name || "Não informado"}\n` +
-    `Email: ${formData.email || "Não informado"}\n` +
-    `Telefone: ${formData.phone || "Não informado"}\n` +
-    `Projeto: ${formData.projectType}\n` +
-    `Mensagem: ${formData.message || "Sem mensagem"}`;
+  const handleOpenWhatsApp = (e: React.MouseEvent) => {
+    e.preventDefault();
 
-  const whatsappUrl = `https://wa.me/5583998673599?text=${encodeURIComponent(textMessage)}`;
+    const textMessage =
+      `Olá! Vim pelo site da Golly Web.\n\n` +
+      `Nome: ${formData.name || "Não informado"}\n` +
+      `Email: ${formData.email || "Não informado"}\n` +
+      `Telefone: ${formData.phone || "Não informado"}\n` +
+      `Projeto: ${formData.projectType}\n` +
+      `Mensagem: ${formData.message || "Sem mensagem"}`;
+
+    const whatsappUrl = `https://wa.me/5583998673599?text=${encodeURIComponent(textMessage)}`;
+
+    // Força a navegação da janela principal sem ser interceptada por iFrames ou formulários
+    if (window.top) {
+      window.top.location.href = whatsappUrl;
+    } else {
+      window.location.href = whatsappUrl;
+    }
+  };
 
   return (
     <section id="orcamento" className="py-24 bg-slate-950 text-white relative overflow-hidden">
@@ -39,14 +50,14 @@ export function QuoteForm() {
               Vamos tirar seu projeto do papel?
             </h2>
             <p className="text-slate-400 mt-3 text-sm md:text-base">
-              Preencha os campos abaixo para iniciar o atendimento.
+              Preencha os campos abaixo para iniciar o atendimento no WhatsApp.
             </p>
           </div>
         </Reveal>
 
         <Reveal>
           <div className="bg-slate-900/50 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl">
-            <div className="space-y-5">
+            <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
               <div>
                 <label className="block text-xs font-medium text-slate-300 mb-1.5">Seu Nome *</label>
                 <input
@@ -113,15 +124,14 @@ export function QuoteForm() {
                 />
               </div>
 
-              <a
-                href={whatsappUrl}
-                target="_top"
-                rel="noopener noreferrer"
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 text-center block"
+              <button
+                type="button"
+                onClick={handleOpenWhatsApp}
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
                 Enviar Orçamento pelo WhatsApp <Send className="w-4 h-4" />
-              </a>
-            </div>
+              </button>
+            </form>
           </div>
         </Reveal>
       </div>
