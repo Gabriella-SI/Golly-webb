@@ -45,7 +45,7 @@ export function ModelsSection() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {visible.map((model) => (
             <Reveal key={model.slug}>
-              <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/40">
+              <div className="float-card group overflow-hidden hover:float-lift-hover hover:border-purple-500/40">
                 <ModelPreview model={model} />
                 <div className="space-y-3 p-5">
                   <div className="flex items-center justify-between">
