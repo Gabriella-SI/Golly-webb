@@ -77,7 +77,10 @@ export function HeroMockup() {
             {/* pilha flutuante */}
             <div className="relative">
               <div className="animate-float relative z-10 [--float-rotate:-2deg]">
-                <BrowserFrame url="gollyweb.com/sua-marca">
+                <BrowserFrame
+                  url="gollyweb.com/sua-marca"
+                  className="rounded-[1.75rem] shadow-[0_50px_90px_-40px_rgba(0,0,0,0.95)]"
+                >
                   <div className="space-y-5 bg-background/80 p-7">
                     <span className="text-[10px] font-semibold tracking-[0.22em] text-violet uppercase">
                       Sua marca
