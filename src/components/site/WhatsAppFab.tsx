@@ -1,19 +1,20 @@
 import { MessageCircle } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/models";
 
 export function WhatsAppFab() {
+  const phoneNumber = "5583998763599";
+  const message = encodeURIComponent("Olá! Vim pelo site da Golly Web e gostaria de solicitar um orçamento para uma Landing Page.");
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
   return (
     <a
-      href={WHATSAPP_URL}
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
-      className="group fixed bottom-5 right-5 z-50 inline-flex items-center gap-0 rounded-full border border-border bg-brand-gradient p-3.5 text-primary-foreground shadow-[0_18px_45px_-18px_rgba(60,50,200,0.9)] transition-all duration-300 hover:scale-105 hover:gap-2 hover:pr-5 sm:bottom-7 sm:right-7"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold shadow-2xl shadow-emerald-500/30 transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
     >
-      <MessageCircle className="h-6 w-6" strokeWidth={2} />
-      <span className="max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold transition-all duration-300 group-hover:max-w-[9rem]">
-        Falar no WhatsApp
-      </span>
+      <MessageCircle className="w-6 h-6 fill-slate-950 stroke-emerald-500 group-hover:rotate-12 transition-transform" />
+      <span className="text-sm hidden sm:inline-block">Falar no WhatsApp</span>
     </a>
   );
 }
