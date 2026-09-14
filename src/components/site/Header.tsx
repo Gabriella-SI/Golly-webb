@@ -30,7 +30,6 @@ export function Header() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Logo */}
         <button
           type="button"
           onClick={() => scrollToSection("inicio")}
@@ -39,7 +38,6 @@ export function Header() {
           Golly Web
         </button>
 
-        {/* Links Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <button
@@ -53,7 +51,6 @@ export function Header() {
           ))}
         </div>
 
-        {/* Botao de Orcamento */}
         <div className="hidden md:flex items-center">
           <button
             type="button"
@@ -64,7 +61,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Botao Menu Mobile */}
         <div className="md:hidden">
           <button
             type="button"
@@ -77,7 +73,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* Dropdown Mobile */}
       {isOpen && (
         <div className="md:hidden bg-slate-950 border-b border-white/10 px-6 py-6 space-y-4">
           {navLinks.map((link) => (
