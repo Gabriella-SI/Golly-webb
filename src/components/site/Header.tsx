@@ -37,8 +37,8 @@ export function Header() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <nav className="fixed top-4 left-0 right-0 z-50 px-4">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full border border-white/10 bg-slate-950/60 px-6 shadow-[0_25px_60px_-30px_rgba(0,0,0,0.9)] backdrop-blur-xl">
         <button
           type="button"
           onClick={() => scrollToSection("inicio")}
@@ -83,7 +83,7 @@ export function Header() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-slate-950 border-b border-white/10 px-6 py-6 space-y-4">
+        <div className="md:hidden mx-auto mt-3 max-w-6xl space-y-4 rounded-3xl border border-white/10 bg-slate-950/85 px-6 py-6 shadow-[0_30px_70px_-35px_rgba(0,0,0,0.95)] backdrop-blur-xl">
           {navLinks.map((link) => (
             <button
               key={link.id}

@@ -4,14 +4,14 @@ import { Reveal } from "./Reveal";
 const plans = [
   {
     name: "Standard",
-    price: "R$ 497",
+    price: "R$ 250",
     description: "Perfeito para quem busca uma página rápida e eficiente.",
     features: ["Landing Page Essencial", "Design Responsivo", "Otimização de Velocidade", "Botões para WhatsApp"],
     popular: false,
   },
   {
     name: "Premium Flutuante",
-    price: "R$ 897",
+    price: "R$ 350",
     description: "A escolha ideal para se destacar da concorrência.",
     features: ["Design Exclusivo e Animações", "Análise de Copy / Texto", "Integração com Métricas", "Domínio e SSL Inclusos", "Suporte Prioritário"],
     popular: true,
@@ -43,7 +43,13 @@ export function PlansSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <Reveal key={index}>
-              <div className={`p-8 rounded-3xl bg-slate-900/50 border ${plan.popular ? "border-purple-500 shadow-purple-500/20 shadow-2xl relative" : "border-white/10"} flex flex-col justify-between h-full`}>
+              <div
+                className={`float-card flex h-full flex-col justify-between p-8 hover:float-lift-hover ${
+                  plan.popular
+                    ? "relative border-purple-500/60 md:-translate-y-4 glow-brand"
+                    : ""
+                }`}
+              >
                 {plan.popular && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-xs font-bold px-4 py-1 rounded-full uppercase">
                     Mais Vendido

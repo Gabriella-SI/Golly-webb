@@ -42,8 +42,10 @@ export function SolutionsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {solutions.map((item, index) => (
             <Reveal key={index}>
-              <div className="p-6 rounded-2xl bg-slate-900/40 border border-white/10 hover:border-purple-500/50 transition-all h-full">
-                <div className="mb-4">{item.icon}</div>
+              <div className="float-card group h-full p-6 hover:float-lift-hover hover:border-purple-500/40">
+                <div className="mb-4 inline-flex rounded-2xl border border-white/10 bg-white/5 p-3 transition-transform duration-500 group-hover:-translate-y-1 group-hover:scale-110">
+                  {item.icon}
+                </div>
                 <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-400">{item.description}</p>
               </div>
