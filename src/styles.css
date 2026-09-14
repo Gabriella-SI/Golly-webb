@@ -264,6 +264,7 @@
 @utility animate-drift {
   animation: drift 9s ease-in-out infinite;
 }
+
 /* Efeitos adicionais para o Glow Flutuante */
 @keyframes pulseGlow {
   0%, 100% {
@@ -282,4 +283,16 @@
 
 @utility animate-float-delayed {
   animation: float-slow 6s ease-in-out 3s infinite;
+}
+
+/* Oculta a marca d'água e badge da Lovable */
+[data-lovable-badge],
+#lovable-badge,
+a[href*="lovable.dev"],
+iframe[src*="lovable.dev"],
+div[class*="lovable-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
