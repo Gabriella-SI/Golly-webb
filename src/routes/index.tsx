@@ -18,7 +18,7 @@ function IndexPage() {
       <Header />
       <main>
         <HeroMockup />
-        <ModelPreview />
+        <ModelsSection />
         <ProcessStep />
         <Testimonials />
         <QuoteForm />
