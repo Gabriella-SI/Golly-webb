@@ -1,4 +1,5 @@
 import { BrowserFrame } from "./BrowserFrame";
+import { Zap, ShieldCheck, Sparkles } from "lucide-react";
 
 export function HeroMockup() {
   return (
@@ -11,7 +12,7 @@ export function HeroMockup() {
         }}
       />
 
-      {/* dots soltos flutuando, só decoração */}
+      {/* dots soltos flutuando */}
       <span
         className="animate-float-medium animate-delay-1 pointer-events-none absolute -left-2 top-6 hidden h-2.5 w-2.5 rounded-full bg-brand-gradient opacity-70 sm:block"
         aria-hidden="true"
@@ -21,7 +22,7 @@ export function HeroMockup() {
         aria-hidden="true"
       />
 
-      {/* estatística flutuante, sobreposta ao card principal */}
+      {/* estatística flutuante */}
       <div
         className="animate-float-reverse card-elevated glow-brand pointer-events-none absolute -right-3 top-2 z-20 hidden rounded-2xl px-4 py-3 backdrop-blur sm:block"
         aria-hidden="true"
@@ -30,7 +31,7 @@ export function HeroMockup() {
         <p className="text-[10px] text-muted-foreground">projetos entregues</p>
       </div>
 
-      {/* mini mockup mobile, flutuando atrás, dando profundidade */}
+      {/* mini mockup mobile */}
       <div
         className="animate-float-medium animate-delay-2 pointer-events-none absolute -bottom-6 -left-4 z-0 hidden w-32 origin-bottom-left sm:block"
         style={{ ["--float-rotate" as string]: "-6deg" }}
@@ -102,20 +103,39 @@ export function HeroMockup() {
               </div>
             </div>
 
+            {/* CAIXINHAS DIREITAS PREENCHIDAS */}
             <div className="hidden space-y-3 sm:block">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 rounded-xl border border-border bg-surface/50 p-3"
-                >
-                  <span className="h-8 w-8 shrink-0 rounded-full bg-brand-gradient opacity-80" />
-                  <div className="space-y-1.5">
-                    <span className="block h-2 w-24 rounded-full bg-foreground/30" />
-                    <span className="block h-2 w-16 rounded-full bg-foreground/15" />
-                  </div>
+              <div className="flex items-center gap-3 rounded-xl border border-border bg-surface/50 p-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gradient">
+                  <Zap className="h-4 w-4 text-white" />
                 </div>
-              ))}
+                <div>
+                  <p className="text-xs font-semibold text-foreground">Alta Velocidade</p>
+                  <p className="text-[10px] text-muted-foreground">Carregamento em 0.9s</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 rounded-xl border border-border bg-surface/50 p-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gradient">
+                  <ShieldCheck className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground">100% Otimizado</p>
+                  <p className="text-[10px] text-muted-foreground">Perfeito para Celulares</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 rounded-xl border border-border bg-surface/50 p-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gradient">
+                  <Sparkles className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground">Foco em Vendas</p>
+                  <p className="text-[10px] text-muted-foreground">Gera mais Orçamentos</p>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </BrowserFrame>
