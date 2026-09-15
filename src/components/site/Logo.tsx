@@ -19,7 +19,7 @@ export function Logo({
       />
       {showName && (
         <span className="font-display text-[1.05rem] font-bold tracking-tight">
-          Golly<span className="text-gradient"> Web</span>
+          Golly<span className="text-gradient">Web</span>
         </span>
       )}
     </span>
