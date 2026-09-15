@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { createWhatsAppUrl } from "@/lib/models";
 
 export function QuoteForm() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,17 @@ export function QuoteForm() {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const quoteMessage = [
+    "Olá! Gostaria de solicitar um orçamento na GollyWeb.",
+    `Nome: ${formData.name || "Não informado"}`,
+    `E-mail: ${formData.email || "Não informado"}`,
+    `WhatsApp: ${formData.phone || "Não informado"}`,
+    `Tipo de projeto: ${formData.projectType}`,
+    formData.message ? `Detalhes: ${formData.message}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   return (
     <section id="orcamento" data-section="faq" className="py-24 bg-slate-950 text-white relative overflow-hidden">
@@ -104,7 +116,7 @@ export function QuoteForm() {
               </div>
 
               <a
-                href="https://wa.me/message/XMNL46P6JIWJC1"
+                href={createWhatsAppUrl(quoteMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-center block select-none"

@@ -268,6 +268,14 @@ export function getModel(slug: string) {
   return models.find((m) => m.slug === slug);
 }
 
-export const WHATSAPP_URL = "https://wa.me/message/XMNL46P6JIWJC1";
+export const WHATSAPP_NUMBER = "5583998673599";
+export const WHATSAPP_MESSAGE =
+  "Olá! Conheci a GollyWeb pelo site e gostaria de solicitar um orçamento.";
+
+export function createWhatsAppUrl(message = WHATSAPP_MESSAGE) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+export const WHATSAPP_URL = createWhatsAppUrl();
 export const INSTAGRAM_URL = "https://instagram.com/gollyweb/";
 export const EMAIL = "gollyweb@gmail.com";
