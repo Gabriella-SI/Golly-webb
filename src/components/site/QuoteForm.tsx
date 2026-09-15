@@ -85,9 +85,9 @@ export function QuoteForm() {
                   onChange={handleChange}
                   className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors"
                 >
-                  <option value="Landing Page Padrão">Landing Page Standard</option>
-                  <option value="Landing Page Premium">Landing Page Premium Flutuante</option>
-                  <option value="Redesign de Site Existente">Redesign de Site Existente</option>
+                  <option value="Landing Page Padrão">Landing Page Padrão</option>
+                  <option value="Landing Page Premium">Landing Page Premium</option>
+                  <option value="Landing Page Personalizada">Landing Page Personalizada</option>
                 </select>
               </div>
 
