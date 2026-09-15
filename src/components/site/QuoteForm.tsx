@@ -108,8 +108,6 @@ export function QuoteForm() {
                   className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors resize-none"
                 />
               </div>
-
-              
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -124,3 +122,6 @@ export function QuoteForm() {
     </section>
   );
 }
+
+              
+                
