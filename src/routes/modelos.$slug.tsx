@@ -13,10 +13,10 @@ export const Route = createFileRoute("/modelos/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Modelo indisponível — Golly Web" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Modelo indisponível — GollyWeb" }, { name: "robots", content: "noindex" }],
       };
     }
-    const title = `Modelo ${loaderData.model.name} (${loaderData.model.category}) — Golly Web`;
+    const title = `Modelo ${loaderData.model.name} (${loaderData.model.category}) — GollyWeb`;
     const description = loaderData.model.summary;
     return {
       meta: [
@@ -41,13 +41,13 @@ function ModelDemo() {
     <div className="min-h-screen bg-background" style={{ ["--accent-demo" as string]: accent }}>
       <WhatsAppFab />
 
-      {/* Golly Web demo bar */}
+      {/* GollyWeb demo bar */}
       <div className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 lg:px-8">
           <Link to="/" className="inline-flex items-center gap-3 text-sm text-muted-foreground">
             <ArrowLeft className="h-4 w-4" />
             <Logo showName={false} />
-            <span className="hidden sm:inline">Voltar para a Golly Web</span>
+            <span className="hidden sm:inline">Voltar para a GollyWeb</span>
           </Link>
           <div className="flex items-center gap-3">
             <span className="hidden text-xs text-muted-foreground sm:inline">
@@ -183,14 +183,14 @@ function ModelDemo() {
         </section>
       </main>
 
-      {/* Golly Web footer for demo */}
+      {/* GollyWeb footer for demo */}
       <div className="border-t border-border bg-background py-14">
         <div className="mx-auto max-w-6xl px-5 lg:px-8">
           <h2 className="text-2xl font-bold sm:text-3xl">
             Gostou do modelo <span className="text-gradient">{model.name}</span>?
           </h2>
           <p className="mt-3 max-w-xl text-sm text-muted-foreground">
-            A Golly Web adapta esse modelo à sua marca — ou cria um projeto totalmente sob medida.
+            A GollyWeb adapta esse modelo à sua marca — ou cria um projeto totalmente sob medida.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link

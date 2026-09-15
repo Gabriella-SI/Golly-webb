@@ -79,14 +79,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Golly Web — Landing pages profissionais" },
+      { title: "GollyWeb — Landing pages profissionais" },
       {
         name: "description",
         content:
           "Landing pages modernas, estratégicas e responsivas para negócios, profissionais e criadores.",
       },
-      { name: "author", content: "Golly Web" },
-      { property: "og:title", content: "Golly Web — Landing pages profissionais" },
+      { name: "author", content: "GollyWeb" },
+      { property: "og:title", content: "GollyWeb — Landing pages profissionais" },
       {
         property: "og:description",
         content: "Landing pages que transformam ideias em presença digital.",

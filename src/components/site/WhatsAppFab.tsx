@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 export function WhatsAppFab() {
   return (
     <a
-      href="https://wa.me/5583998673599?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Golly%20Web%20e%20gostaria%20de%20um%20or%C3%A7amento."
+      href="https://wa.me/5583998673599?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GollyWeb%20e%20gostaria%20de%20um%20or%C3%A7amento."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex animate-float cursor-pointer items-center justify-center rounded-full border border-white/15 bg-emerald-500 p-4 text-white shadow-[0_25px_50px_-20px_rgba(0,0,0,0.9)] transition-all duration-300 hover:scale-110 hover:bg-emerald-400"

@@ -44,7 +44,7 @@ export function Header() {
           onClick={() => scrollToSection("inicio")}
           className="text-2xl font-black bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer border-none bg-transparent"
         >
-          Golly Web
+          GollyWeb
         </button>
 
         <div className="hidden md:flex items-center gap-8">

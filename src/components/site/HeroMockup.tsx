@@ -1,7 +1,7 @@
 import { ArrowRight, MessageSquare, TrendingUp } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/5583998673599?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Golly%20Web%20e%20gostaria%20de%20um%20or%C3%A7amento.";
+  "https://wa.me/5583998673599?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GollyWeb%20e%20gostaria%20de%20um%20or%C3%A7amento.";
 
 const stats = [
   { value: "48h", label: "Entrega média" },

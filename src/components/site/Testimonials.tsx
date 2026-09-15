@@ -6,7 +6,7 @@ const testimonials = [
     name: "Lucas Mendes",
     role: "Proprietário",
     company: "Studio Fit",
-    comment: "A Landing Page que a Golly Web criou superou totalmente minhas expectativas. O design é impecável e minhas conversões aumentaram na primeira semana!",
+    comment: "A Landing Page que a GollyWeb criou superou totalmente minhas expectativas. O design é impecável e minhas conversões aumentaram na primeira semana!",
     rating: 5,
     tag: "Landing Page Personalizada",
   },
@@ -35,7 +35,7 @@ export function Testimonials() {
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
-              O que dizem sobre a Golly Web
+              O que dizem sobre a GollyWeb
             </h2>
             <p className="text-slate-400 mt-4 text-base">
               Páginas pensadas estrategicamente para gerar impacto, autoridade e conversões reais.
