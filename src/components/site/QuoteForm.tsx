@@ -17,12 +17,6 @@ export function QuoteForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const whatsappUrl = `https://wa.me/5583998673599?text=${encodeURIComponent(
-    `Olá! Vim pelo site da Golly Web.\n\nNome: ${formData.name}\nE-mail: ${formData.email}\nWhatsApp: ${formData.phone}\nProjeto: ${formData.projectType}${
-      formData.message ? `\nDetalhes: ${formData.message}` : ""
-    }`
-  )}`;
-
   return (
     <section id="orcamento" data-section="faq" className="py-24 bg-slate-950 text-white relative overflow-hidden">
       <div className="max-w-3xl mx-auto px-6 relative z-10">
@@ -108,7 +102,9 @@ export function QuoteForm() {
                   className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors resize-none"
                 />
               </div>
-                href={whatsappUrl}
+
+              <a
+                href="https://wa.me/message/XMNL46P6JIWJC1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-center block select-none"
@@ -122,6 +118,3 @@ export function QuoteForm() {
     </section>
   );
 }
-
-              
-                
