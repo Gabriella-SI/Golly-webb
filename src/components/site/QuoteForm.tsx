@@ -7,7 +7,7 @@ export function QuoteForm() {
     name: "",
     email: "",
     phone: "",
-    projectType: "Landing Page Standard",
+    projectType: "Landing Page Padrão",
     message: "",
   });
 
@@ -85,8 +85,8 @@ export function QuoteForm() {
                   onChange={handleChange}
                   className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors"
                 >
-                  <option value="Landing Page Standard">Landing Page Standard</option>
-                  <option value="Landing Page Premium Flutuante">Landing Page Premium Flutuante</option>
+                  <option value="Landing Page Padrão">Landing Page Standard</option>
+                  <option value="Landing Page Premium">Landing Page Premium Flutuante</option>
                   <option value="Redesign de Site Existente">Redesign de Site Existente</option>
                 </select>
               </div>
