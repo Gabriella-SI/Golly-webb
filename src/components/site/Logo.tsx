@@ -12,7 +12,7 @@ export function Logo({
     <span className={cn("inline-flex items-center gap-2.5", className)}>
       <img
         src={mark}
-        alt="Símbolo da Golly Web"
+        alt="Símbolo da GollyWeb"
         width={816}
         height={816}
         className="h-8 w-8 shrink-0 drop-shadow-[0_0_18px_rgba(90,80,255,0.35)]"

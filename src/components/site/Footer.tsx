@@ -29,7 +29,7 @@ export function Footer() {
           </a>
         </div>
         <p className="text-xs text-slate-600">
-          © {new Date().getFullYear()} Golly Web. Todos os direitos reservados.
+          © {new Date().getFullYear()} GollyWeb. Todos os direitos reservados.
         </p>
       </div>
     </footer>
